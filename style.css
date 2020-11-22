@@ -1,0 +1,113 @@
+/* CSS DOCUMENT */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+
+
+/*------------------------------Global Elements--------------------------------*/
+
+    :root{font-family: sans-serif;}
+
+    h1{
+        font-family: proxima-nova, sans-serif;
+        font-weight: 500;
+        font-size: 3.3rem;
+        padding-bottom: 2.5rem;
+        color: #242424;
+    }
+
+    h2{
+        font-family: proxima-nova, sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: .4px;
+        padding-top: 2rem;
+        text-transform: uppercase;
+        color: #242424;
+    }
+
+    h3{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        padding-bottom: .5rem;
+        color: #242424;
+    }
+
+    h4{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 300;
+        font-size: .9rem;
+        line-height: 1.2em;
+        color: #959595;
+        margin-bottom: 1.2rem;
+    }
+
+    p{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        color: #242424;
+    }
+
+    a{
+        color: purple;
+        text-decoration: none;
+        flex-wrap: nowrap;
+    }
+
+    button{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        cursor: pointer;
+        background: none;
+        border: none;
+        margin: .4rem 0 0 0;
+        padding: 0;
+        color: purple;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        h1{font-size: 2.2rem;}
+        h2{font-size: 1.1rem;}
+        h3{font-size: 1.8rem}
+        h4{font-size: .9rem}
+        p{font-size: 1.1rem; line-height: 1.7}
+        button{font-size: 1.1rem; line-height: 1.7;}
+    }
+
+    .keyline{
+        width: 100%;
+        height: 1px;
+        max-width: 20rem;
+        background-color: #CFCFCF;
+        margin: 2rem auto 1.8rem;
+    }
+
+/*------------------------------Background--------------------------------*/
+
+    body{
+        
+    }
+
+/*------------------------------Logo--------------------------------*/
+
+    .logo-wrapper{
+        
+    }
+
+/*------------------------------Menu--------------------------------*/
+
+    .menu-wrapper{
+        
+    }
+
+
+
+/*------------------------------Footer--------------------------------*/
+
+    footer{
+
+    }
