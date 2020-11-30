@@ -5,104 +5,242 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /*------------------------------Global Elements--------------------------------*/
 
-    :root{font-family: sans-serif;}
+:root{
+    --black: #5D5D5D;
+    --white: #f8f8f8;
+    --blue: #11b3bc;
+}
 
-    h1{
-        font-family: proxima-nova, sans-serif;
-        font-weight: 500;
-        font-size: 3.3rem;
-        padding-bottom: 2.5rem;
-        color: #242424;
-    }
+html{overflow-x: hidden;}
 
-    h2{
-        font-family: proxima-nova, sans-serif;
-        font-weight: 600;
-        font-size: 1.2rem;
-        letter-spacing: .4px;
-        padding-top: 2rem;
-        text-transform: uppercase;
-        color: #242424;
-    }
+body{
+    background-color: var(--white);
+    overflow-x: hidden;
+}
 
-    h3{
-        font-family: depot-new-web, sans-serif;
-        font-weight: 400;
-        font-size: 2rem;
-        padding-bottom: .5rem;
-        color: #242424;
-    }
+h1{
+    font-family: utopia-std-display, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4.3rem;
+    line-height: 1;
+    color: var(--white);
+}
 
-    h4{
-        font-family: depot-new-web, sans-serif;
-        font-weight: 300;
-        font-size: .9rem;
-        line-height: 1.2em;
-        color: #959595;
-        margin-bottom: 1.2rem;
-    }
+h2{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--white);
+}
 
-    p{
-        font-family: depot-new-web, sans-serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        line-height: 1.5em;
-        color: #242424;
-    }
+h3{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #FFF;
+}
 
-    a{
-        color: purple;
-        text-decoration: none;
-        flex-wrap: nowrap;
-    }
+p{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--white);
+}
 
-    button{
-        font-family: depot-new-web, sans-serif;
-        font-weight: 300;
-        font-size: 1.2rem;
-        line-height: 1.5em;
-        cursor: pointer;
-        background: none;
-        border: none;
-        margin: .4rem 0 0 0;
-        padding: 0;
-        color: purple;
-    }
+a{text-decoration: none;}
 
-    @media only screen and (max-width: 40rem) {
-        h1{font-size: 2.2rem;}
-        h2{font-size: 1.1rem;}
-        h3{font-size: 1.8rem}
-        h4{font-size: .9rem}
-        p{font-size: 1.1rem; line-height: 1.7}
-        button{font-size: 1.1rem; line-height: 1.7;}
-    }
+button{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-family: depot-new-web, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: none;
+    color: var(--white);
+    border: var(--white) solid .125rem;
+    border-radius: 2.5rem;
+    transition: ease .3s;
+}
 
-    .keyline{
-        width: 100%;
-        height: 1px;
-        max-width: 20rem;
-        background-color: #CFCFCF;
-        margin: 2rem auto 1.8rem;
-    }
+button:hover{
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
+    transform: translateY(-.1em)
+}
 
-/*------------------------------Background--------------------------------*/
+button:focus{outline: none;}
 
-    body{
-        
-    }
+@media only screen and (max-width: 70rem){
+    h1{font-size: 3.5rem}
+    h2{font-size: 1.3rem}
+    h3{font-size: 1.7rem}
+}
 
-/*------------------------------Logo--------------------------------*/
+@media only screen and (max-width: 50rem){
+    h1{font-size: 3rem}
+    h2{font-size: 1.2rem}
+    h3{font-size: 1.4rem}
+    p{font-size: 1.1rem; line-height: 1.8}
+    button{font-size: .9rem;}
+}
 
-    .logo-wrapper{
-        
-    }
+/*------------------------------Global Elements--------------------------------*/
+
+.green-circle{
+    opacity: .8;
+    position: absolute;
+    overflow-x: hidden;
+    background-image: url(/assets/global/green-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blue-circle{
+    opacity: .7;
+    position: absolute;
+    overflow-x: hidden;
+    background-image: url(/assets/global/blue-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 /*------------------------------Menu--------------------------------*/
 
-    .menu-wrapper{
-        
+.menu-wrapper{
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    transition: ease .3s;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 0 3em;
+}
+
+.menu img{
+    display: none;
+    width: 130px;
+    transition: ease .3s;
+}
+
+@media only screen and (max-width: 50em){
+    .menu-wrapper{height: 70px;}
+    .menu{padding: 0 1.5em;}
+    .menu img{width: 100px;}
+}
+
+/* For Javascript to activate */
+.js-menu-wrapper{
+    background-color: #FFF;
+    border-bottom-left-radius: .6em;
+    border-bottom-right-radius: .6em;
+    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.06);
+}
+
+.js-menu{justify-content: space-between;}
+
+/*------------------------------Hero--------------------------------*/
+
+.hero-wrapper{
+    background-color: #1E6B89;
+    background-image: url(/assets/hero-section/hero-image.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 100px) 100%;
+    background-size: contain;
+}
+
+.hero{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 6em;
+    max-width: 90em;
+    height: 100vh;
+    min-height: 30em;
+    max-height: 70rem;
+}
+
+.hero-copy{
+    display: flex;
+    position: relative;
+}
+
+.hero-copy img{
+    width: 110px;
+    margin-bottom: .5em;
+}
+
+.hero h1{
+    color: var(--white);
+    padding-bottom: .2em;
+    max-width: 7em;
+    z-index: 9;
+}
+
+.hero h2{
+    color: var(--white);
+    max-width: 25em;
+}
+
+.hero .green-circle{
+    height: 90vh;
+    width: 90vh;
+    left: -400px;
+    top: 30vh;
+}
+
+.hero .blue-circle{
+    height: 130vh;
+    width: 130vh;
+    left: -350px;
+    top: -250px;
+}
+
+
+@media only screen and (max-width: 70em){
+    .hero-wrapper{
+        background-position: calc(100% + 170px) 100%;
     }
+}
+
+@media only screen and (max-width: 50em){
+    .hero{padding: 0 2em;}
+
+    .hero-copy img{width: 90px;}
+
+    .hero .green-circle{
+        height: 700px;
+        width: 700px;
+        left: -300px;
+        top: 300px;
+    }
+    
+    .hero .blue-circle{
+        height: 1000px;
+        width: 1000px;
+        left: -400px;
+        top: -200px;
+    }
+}
+
+
+.features{
+    height: 100vh;
+    background-color:#EAF3F3;
+    position: relative;
+}
 
 
 
