@@ -97,6 +97,7 @@ button:focus{outline: none;}
     background-image: url(/assets/global/green-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    animation: rotating 20s linear infinite;
 }
 
 .blue-circle{
@@ -106,6 +107,7 @@ button:focus{outline: none;}
     background-image: url(/assets/global/blue-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    animation: rotating 30s linear infinite;
 }
 
 /*------------------------------Menu--------------------------------*/
@@ -173,6 +175,7 @@ button:focus{outline: none;}
 }
 
 .hero-copy{
+    animation: fade-in .8s ease-in 1;
     display: flex;
     position: relative;
 }
