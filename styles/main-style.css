@@ -107,7 +107,7 @@ button:focus{outline: none;}
     background-image: url(/assets/global/blue-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    animation: rotating 30s linear infinite;
+    animation: rotating 50s linear infinite;
 }
 
 /*------------------------------Menu--------------------------------*/
