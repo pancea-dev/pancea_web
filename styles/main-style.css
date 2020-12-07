@@ -11,11 +11,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --blue: #11b3bc;
 }
 
-html{overflow-x: hidden;}
+/* html{overflow-x: hidden;} */
 
 body{
     background-color: var(--white);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 h1{
@@ -28,7 +28,7 @@ h1{
 h2{
     font-family: utopia-std-display, serif;
     font-weight: 700;
-    font-size: 3rem; 
+    font-size: 3.5rem;
     color: var(--black);
 }
 
@@ -38,13 +38,23 @@ h3{
     font-size: 2rem;
     line-height: 1.2;
     color: var(--black);
+    margin-bottom: .8rem;
+}
+
+h4{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: .4rem;
 }
 
 p{
     font-family: depot-new-web, sans-serif;
     font-weight: 200;
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: var(--black);
 }
 
@@ -75,22 +85,23 @@ button:focus{outline: none;}
     h1{font-size: 3.5rem}
     h2{font-size: 2.8rem}
     h3{font-size: 1.7rem}
+    h4{font-size: 1rem}
 }
 
 @media only screen and (max-width: 50rem){
     h1{font-size: 3rem}
     h2{font-size: 2.7rem}
     h3{font-size: 1.4rem}
-    p{font-size: 1.1rem; line-height: 1.8}
+    p{font-size: 1rem;}
     button{font-size: .9rem;}
 }
 
-/*------------------------------Global Elements--------------------------------*/
+/*------------------------------Circles--------------------------------*/
 
 .green-circle{
     opacity: .8;
     position: absolute;
-    overflow-x: hidden;
+    overflow: hidden;
     background-image: url(/assets/global/green-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -100,46 +111,47 @@ button:focus{outline: none;}
 .blue-circle{
     opacity: .7;
     position: absolute;
-    overflow-x: hidden;
+    overflow: hidden;
     background-image: url(/assets/global/blue-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
     animation: rotating 60s linear infinite;
 }
 
-.card-bleed{
+/*------------------------------Cards--------------------------------*/
+
+.card-popout{
     position: relative;
-    width: 20rem;
+    max-width: 22rem;
     margin: 0 auto;
-    padding: 2.2rem;
-    background-color: #FFF;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2em 2em #0e585133
 }
 
-.card-bleed img{
+.card-copy{
     position: relative;
-    z-index: 0;
-    margin-top: -10rem;
-    margin-bottom: -5rem;
-    height: 70%;
+    padding: 6.5rem 2.2rem 2.2rem 2.2rem;
+    background: #ffffff;
+    background: linear-gradient(0deg, #ffffff 0%, #ffffff 65%, rgba(255,255,255,0) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.card-bleed h3, .card-bleed p{
-    position: relative;
+#card-1 img{
+    width: 80%;
+    margin: -6rem 0 -12rem 15%;
 }
 
-.image-fade{
-    position: absolute;
-    margin: 0 0 20px -2.2rem;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 50%;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 1) 70%, rgba(255,255,255,0) 100%);
+#card-2 img{
+    width: 80%;
+    margin: -6rem 0 -9rem 15%;
 }
 
+#card-3 img{
+    width: 50%;
+    margin: -6rem 0 -14rem 35%;
+}
 
 /*------------------------------Menu--------------------------------*/
 
@@ -187,6 +199,7 @@ button:focus{outline: none;}
 /*------------------------------Hero--------------------------------*/
 
 .hero-wrapper{
+    overflow: hidden;
     background-color: #1E6B89;
     background-image: url(/assets/hero-section/hero-image.png);
     background-repeat: no-repeat;
@@ -207,13 +220,13 @@ button:focus{outline: none;}
     max-height: 70rem;
 }
 
-.hero-copy{
+.hero .copy{
     animation: fade-in .8s ease-out 1;
     display: flex;
     position: relative;
 }
 
-.hero-copy img{
+.hero .copy img{
     width: 110px;
     margin-bottom: .5em;
 }
@@ -247,7 +260,6 @@ button:focus{outline: none;}
     top: -250px;
 }
 
-
 @media only screen and (max-width: 70em){
     .hero-wrapper{background-position: calc(100% + 350px) 100%;}
 
@@ -259,7 +271,7 @@ button:focus{outline: none;}
 
     .hero{padding: 0 2em;}
 
-    .hero-copy img{width: 90px;}
+    .hero .copy img{width: 90px;}
 
     .hero .green-circle{
         height: 700px;
@@ -267,7 +279,7 @@ button:focus{outline: none;}
         left: -300px;
         top: 300px;
     }
-    
+
     .hero .blue-circle{
         height: 1000px;
         width: 1000px;
@@ -278,14 +290,56 @@ button:focus{outline: none;}
     .hero p{font-size: 1.2rem}
 }
 
+/*------------------------------Two Column--------------------------------*/
 
-.sticky-cards{
-    padding-top: 20rem;
-    height: 100vh;
+.two-column-wrapper{
     background-color:#EAF3F3;
     position: relative;
 }
 
+.two-column{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 80rem;
+}
+
+.two-column .copy{
+    flex-basis: 40%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 3rem;
+    height: 100vh;
+    max-width: 30rem;
+}
+
+.two-column .cards{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+    margin: 15rem 2rem;
+}
+
+@media only screen and (max-width: 50em){
+    .two-column{
+        display: block;
+        padding-bottom: 5rem;
+    }
+
+    .two-column .copy{
+        position: static;
+        height: 50vh;
+    }
+
+    .two-column .cards{
+        margin: 3rem 1rem 0;
+        gap: 12rem
+    }
+}
 
 
 /*------------------------------Footer--------------------------------*/
