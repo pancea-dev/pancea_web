@@ -28,7 +28,8 @@ h1{
 h2{
     font-family: utopia-std-display, serif;
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    line-height: 1.1;
     color: var(--black);
 }
 
@@ -174,18 +175,11 @@ button:focus{outline: none;}
     border-radius: 50%;
 }
 
-
-
 .bubble img{height: 100%;}
 
-.study-wrapper .copy{
-    max-width: 55rem;
-    
-}
+#card-4 .bubble{background-color: #CEECE9;}
 
-#card-4{background-color: #CEECE9;}
-
-#card-5{background-color: #D3EEEF;}
+#card-5 .bubble{background-color: #D3EEEF;}
 
 /*------------------------------Menu--------------------------------*/
 
@@ -373,6 +367,48 @@ button:focus{outline: none;}
         margin: 3rem 1rem 0;
         gap: 12rem
     }
+}
+
+/*------------------------------Study--------------------------------*/
+
+.study-wrapper .copy-wrapper{
+    max-width: 70rem;
+    padding: 2rem;
+    margin: 10rem auto;
+}
+.study-wrapper .copy{
+    max-width: 55rem;
+}
+
+.study-wrapper .cards-wrapper{
+    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(/assets/study/pexels-andrea-piacquadio.jpg);
+    background-size: cover;
+    background-position: 0% 45%;
+}
+
+.study-wrapper .cards{
+    position: relative;
+    z-index: 0;
+    max-width: 70rem;
+    margin: 0 auto 10rem;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.study-wrapper #card-4{
+    margin-top: -11rem;
+}
+
+.study-wrapper .image-fade{
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background-color: lawngreen;
+    z-index: 9;
+
 }
 
 
