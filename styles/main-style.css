@@ -103,7 +103,7 @@ button:focus{outline: none;}
     opacity: .8;
     position: absolute;
     overflow: hidden;
-    background-image: url(/assets/global/green-circle.svg);
+    background-image: url(../assets/global/green-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
     animation: rotating 20s linear infinite;
@@ -113,7 +113,7 @@ button:focus{outline: none;}
     opacity: .7;
     position: absolute;
     overflow: hidden;
-    background-image: url(/assets/global/blue-circle.svg);
+    background-image: url(../assets/global/blue-circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
     animation: rotating 60s linear infinite;
@@ -127,7 +127,7 @@ button:focus{outline: none;}
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2em 2em #0e585133
+    box-shadow: 0 2em 2em #0e585133;
 }
 
 .card-popout .card-copy{
@@ -229,7 +229,7 @@ button:focus{outline: none;}
 .hero-wrapper{
     overflow: hidden;
     background-color: #1E6B89;
-    background-image: url(/assets/hero-section/hero-image.png);
+    background-image: url(../assets/hero-section/hero-image.png);
     background-repeat: no-repeat;
     background-position: calc(100% + 100px) 100%;
     background-size: contain;
@@ -382,15 +382,15 @@ button:focus{outline: none;}
 }
 
 .study-wrapper .cards-wrapper{
-    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(/assets/study/pexels-andrea-piacquadio.jpg);
+    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(../assets/study/pexels-andrea-piacquadio.jpg);
     background-size: cover;
     background-position: 0% 30%;
 }
 
 .study-wrapper .cards{
     max-width: 70rem;
-    margin: 0 auto 10rem;
-    padding: 8rem 4rem;
+    margin: 0 auto;
+    padding: 8rem 4rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -404,7 +404,7 @@ button:focus{outline: none;}
     .study-wrapper .copy-wrapper{
         margin: 0rem auto 4rem;
         padding: 15rem 2rem 0;
-        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, rgba(255,255,255,0) 100%), url(/assets/study/pexels-andrea-piacquadio.jpg);
+        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, rgba(255,255,255,0) 100%), url(../assets/study/pexels-andrea-piacquadio.jpg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -420,6 +420,91 @@ button:focus{outline: none;}
 
     .study-wrapper #card-4{margin-top: 0;}
 }
+
+/*------------------------------Sliders--------------------------------*/
+
+.slider-wrapper{
+    max-width: 40rem;
+    padding: 4rem 6rem 2rem 8rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 2em 2em #41414133;
+    margin: 5rem auto;
+}
+
+.slider{
+    position: relative;
+}
+
+.slider p{
+    line-height: 2;
+    margin-bottom: .8rem;
+}
+
+.slider-content-one::before, .slider-content-two::before, .slider-content-three::before{
+    content: url(../assets/slider/quote-symbol.svg);
+    position: absolute;
+    left: -80px;
+    top: -10px;
+}
+
+@media only screen and (max-width: 70em) {
+    .slider{max-width: 35em;}
+    .slider h3{font-size: 1.3em}
+}
+
+.slider-nav{
+    display: flex;
+    justify-content: center; 
+}
+
+.left-arrow{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 1.43em .8em;
+}
+
+.right-arrow{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 1.43em .8em;
+}
+
+.dots{
+    margin-top: 2em;
+    display: flex; 
+}
+
+.dot-active{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #000;
+    margin: 0 .5em;
+}
+
+.dot-inactive{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #A7A7A7;
+    margin: 0 .5em;
+}
+
+.slider-content-one{display: inline;}
+
+.slider-content-two{display: none;}
+
+.slider-content-three{display: none;}
+
+.slider-content-four{display: none;}
+
+/*For Javascript to activate*/
+.slider-content-inactive{display: none;}
+
+.slider-content-active{display: inline;}
 
 /*------------------------------Footer--------------------------------*/
 
