@@ -405,7 +405,7 @@ button:focus{outline: none;}
         padding: 15rem 2rem 0;
         background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, rgba(255,255,255,0) 100%), url(../assets/employer-section/pexels-andrea-piacquadio.jpg);
         background-size: cover;
-        background-position: 50% 50%;
+        background-position: 60% 50%;
     }
 
     .employer-wrapper .copy{
@@ -420,16 +420,77 @@ button:focus{outline: none;}
     .employer-wrapper #card-4{margin-top: 0;}
 }
 
-/*------------------------------Sliders--------------------------------*/
+/*------------------------------Testimonials Section--------------------------------*/
+
+.testimonials-wrapper{
+    overflow-x: hidden;
+    position: relative;
+}
 
 .centered{
     margin: 10rem auto 0;
     padding: 0 3rem;
     text-align: center;
     max-width: 50rem;
+    position: relative;
+}
+
+.testimonials-wrapper .blue-circle{
+    animation: initial;
+    height: 130vh;
+    width: 130vh;
+    right: -100px;
+    top: -150px;
+    opacity: .4;
+    transform: rotate(160deg);
+}
+
+.partners-wrapper{
+    display: flex;
+    max-width: 60rem;
+    margin: 10rem auto;
+    padding: 0 4rem;
+}
+
+.partners-wrapper .copy{flex-basis: 50%;}
+
+.partners-wrapper img{
+    width: 40%;
+    padding: 1rem 0 1rem 4rem;
+    flex-basis: 50%;
+    border-left: #bebebe 1px solid;
+}
+
+/* @media only screen and (max-width: 0em) {
+    .partners-wrapper .copy{flex-basis: 40%;}
+
+    .partners-wrapper img{
+        padding: 1rem 0 1rem 2rem;
+        margin-left: 1rem;
+    }
+} */
+
+@media only screen and (max-width: 60em) {
+    .partners-wrapper{
+        flex-direction: column;
+        max-width: 40rem;
+        padding: 0;
+        margin: 10rem 2rem;
+    }
+
+    .partners-wrapper img{
+        width: 80%;
+        max-width: 400px;
+        padding: 2.2rem 0;
+        margin-top: 1rem;
+        flex-basis: 50%;
+        border-left: initial;
+        border-top: #bebebe 1px solid;
+    }
 }
 
 .slider-wrapper{
+    position: relative;
     max-width: 40rem;
     padding: 4rem 6rem 2rem 8rem;
     background-color: #FFF;
@@ -488,16 +549,13 @@ button:focus{outline: none;}
 }
 
 @media only screen and (max-width: 60em) {
-
     .slider-wrapper{
         max-width: initial;
-        padding: 7rem 10% 2rem 10%;
+        padding: 7rem 8% 2rem 8%;
         margin: 3rem 2rem 5rem;
     }
 
     .slider-content-one::before, .slider-content-two::before, .slider-content-three::before, .slider-content-four::before{
-        content: url(../assets/slider/quote-symbol.svg);
-        position: absolute;
         left: 0;
         top: -85px;
     }
