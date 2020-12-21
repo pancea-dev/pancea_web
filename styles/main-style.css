@@ -31,6 +31,7 @@ h2{
     font-size: 3.2rem;
     line-height: 1.1;
     color: var(--black);
+    margin-bottom: .8rem;
 }
 
 h3{
@@ -54,7 +55,7 @@ h4{
 p{
     font-family: depot-new-web, sans-serif;
     font-weight: 200;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: var(--black);
 }
@@ -119,68 +120,6 @@ button:focus{outline: none;}
     animation: rotating 60s linear infinite;
 }
 
-/*------------------------------Cards--------------------------------*/
-
-.card-popout{
-    position: relative;
-    max-width: 25rem;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2em 2em #0e585133;
-}
-
-.card-popout .card-copy{
-    position: relative;
-    padding: 6.5rem 2.2rem 2.2rem 2.2rem;
-    background: #ffffff;
-    background: linear-gradient(0deg, #ffffff 0%, #ffffff 65%, rgba(255,255,255,0) 100%);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#card-1 img{
-    width: 80%;
-    margin: -6rem 0 -12rem 15%;
-}
-
-#card-2 img{
-    width: 80%;
-    margin: -6rem 0 -9rem 15%;
-}
-
-#card-3 img{
-    width: 50%;
-    margin: -6rem 0 -16rem 35%;
-}
-
-.card-bubble{
-    position: relative;
-    max-width: 25rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2em 2em #41414133;
-    padding: 3.5rem 2.2rem 2.2rem;
-}
-
-.card-bubble .bubble{
-    vertical-align: middle;
-    position: absolute;
-    top: -15px;
-    left: -10px;
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 .2em .5em rgba(0, 0, 0, 0.15);
-    padding: 15px;
-    border-radius: 50%;
-}
-
-.bubble img{height: 100%;}
-
-#card-4 .bubble{background-color: #CEECE9;}
-
-#card-5 .bubble{background-color: #D3EEEF;}
-
 /*------------------------------Menu--------------------------------*/
 
 .menu-wrapper{
@@ -224,7 +163,7 @@ button:focus{outline: none;}
 
 .js-menu{justify-content: space-between;}
 
-/*------------------------------Hero--------------------------------*/
+/*------------------------------Hero Section--------------------------------*/
 
 .hero-wrapper{
     overflow: hidden;
@@ -255,7 +194,7 @@ button:focus{outline: none;}
 }
 
 .hero .copy img{
-    width: 110px;
+    width: 130px;
     margin-bottom: .5em;
 }
 
@@ -318,21 +257,21 @@ button:focus{outline: none;}
     .hero p{font-size: 1.2rem}
 }
 
-/*------------------------------Two Column--------------------------------*/
+/*------------------------------Features Section--------------------------------*/
 
-.two-column-wrapper{
+.features-wrapper{
     background-color:#EAF3F3;
     position: relative;
 }
 
-.two-column{
+.features{
     margin: 0 auto;
     display: flex;
     justify-content: center;
     max-width: 80rem;
 }
 
-.two-column .copy{
+.features .copy{
     flex-basis: 40%;
     position: sticky;
     top: 0;
@@ -344,7 +283,7 @@ button:focus{outline: none;}
     max-width: 30rem;
 }
 
-.two-column .cards{
+.features .cards{
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
@@ -352,42 +291,75 @@ button:focus{outline: none;}
     padding: 15rem 4rem 15rem 3rem;
 }
 
+.card-popout{
+    position: relative;
+    max-width: 25rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2em 2em #0e585133;
+}
+
+.card-popout .card-copy{
+    position: relative;
+    padding: 6.5rem 2.2rem 2.2rem 2.2rem;
+    background: #ffffff;
+    background: linear-gradient(0deg, #ffffff 0%, #ffffff 65%, rgba(255,255,255,0) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#card-1 img{
+    width: 80%;
+    margin: -6rem 0 -12rem 15%;
+}
+
+#card-2 img{
+    width: 80%;
+    margin: -6rem 0 -9rem 15%;
+}
+
+#card-3 img{
+    width: 50%;
+    margin: -6rem 0 -16rem 35%;
+}
+
 @media only screen and (max-width: 50em){
-    .two-column{
+    .features{
         display: block;
         padding-bottom: 8rem;
     }
 
-    .two-column .copy{
+    .features .copy{
         position: static;
         height: initial;
         padding: 6rem 2rem;
     }
 
-    .two-column .cards{
+    .features .cards{
         padding: 3rem 2rem 0;
         gap: 11rem
     }
 }
 
-/*------------------------------Study--------------------------------*/
+/*------------------------------Employer Section--------------------------------*/
 
-.study-wrapper .copy-wrapper{
+.employer-wrapper .copy-wrapper{
     max-width: 70rem;
     padding: 0 4rem;
     margin: 10rem auto;
 }
-.study-wrapper .copy{
+.employer-wrapper .copy{
     width: 70%;
 }
 
-.study-wrapper .cards-wrapper{
-    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(../assets/study/pexels-andrea-piacquadio.jpg);
+.employer-wrapper .cards-wrapper{
+    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(../assets/employer-section/pexels-andrea-piacquadio.jpg);
     background-size: cover;
-    background-position: 0% 30%;
+    background-position: 50% 30%;
 }
 
-.study-wrapper .cards{
+.employer-wrapper .cards{
     max-width: 70rem;
     margin: 0 auto;
     padding: 8rem 4rem 3rem;
@@ -396,32 +368,66 @@ button:focus{outline: none;}
     gap: 5rem;
 }
 
-.study-wrapper #card-4{
+.employer-wrapper #card-4{
     margin-top: -11rem;
 }
 
+.card-bubble{
+    position: relative;
+    max-width: 25rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2em 2em #41414133;
+    padding: 3.5rem 2.2rem 2.2rem;
+}
+
+.card-bubble .bubble{
+    vertical-align: middle;
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 .2em .5em rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.bubble img{height: 100%;}
+
+#card-4 .bubble, #card-6 .bubble{background-color: #CEECE9;}
+
+#card-5 .bubble{background-color: #D3EEEF;}
+
 @media only screen and (max-width: 50em){
-    .study-wrapper .copy-wrapper{
+    .employer-wrapper .copy-wrapper{
         margin: 0rem auto 4rem;
         padding: 15rem 2rem 0;
-        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, rgba(255,255,255,0) 100%), url(../assets/study/pexels-andrea-piacquadio.jpg);
+        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, rgba(255,255,255,0) 100%), url(../assets/employer-section/pexels-andrea-piacquadio.jpg);
         background-size: cover;
         background-position: 50% 50%;
     }
 
-    .study-wrapper .copy{
+    .employer-wrapper .copy{
         max-width: 30rem;
         width: initial;
     }
 
-    .study-wrapper .cards-wrapper{background: initial;}
+    .employer-wrapper .cards-wrapper{background: initial;}
 
-    .study-wrapper .cards{padding: 0 2rem;}
+    .employer-wrapper .cards{padding: 0 2rem;}
 
-    .study-wrapper #card-4{margin-top: 0;}
+    .employer-wrapper #card-4{margin-top: 0;}
 }
 
 /*------------------------------Sliders--------------------------------*/
+
+.centered{
+    margin: 10rem auto 0;
+    padding: 0 3rem;
+    text-align: center;
+    max-width: 50rem;
+}
 
 .slider-wrapper{
     max-width: 40rem;
@@ -441,16 +447,11 @@ button:focus{outline: none;}
     margin-bottom: .8rem;
 }
 
-.slider-content-one::before, .slider-content-two::before, .slider-content-three::before{
-    content: url(../assets/slider/quote-symbol.svg);
+.slider-content-one::before, .slider-content-two::before, .slider-content-three::before, .slider-content-four::before{
+    content: url(../assets/testimonial-section/quote-symbol.svg);
     position: absolute;
     left: -80px;
     top: -10px;
-}
-
-@media only screen and (max-width: 70em) {
-    .slider{max-width: 35em;}
-    .slider h3{font-size: 1.3em}
 }
 
 .slider-nav{
@@ -458,14 +459,7 @@ button:focus{outline: none;}
     justify-content: center; 
 }
 
-.left-arrow{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    padding: 1.43em .8em;
-}
-
-.right-arrow{
+.left-arrow, .right-arrow{
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -493,13 +487,25 @@ button:focus{outline: none;}
     margin: 0 .5em;
 }
 
+@media only screen and (max-width: 60em) {
+
+    .slider-wrapper{
+        max-width: initial;
+        padding: 7rem 10% 2rem 10%;
+        margin: 3rem 2rem 5rem;
+    }
+
+    .slider-content-one::before, .slider-content-two::before, .slider-content-three::before, .slider-content-four::before{
+        content: url(../assets/slider/quote-symbol.svg);
+        position: absolute;
+        left: 0;
+        top: -85px;
+    }
+}
+
 .slider-content-one{display: inline;}
 
-.slider-content-two{display: none;}
-
-.slider-content-three{display: none;}
-
-.slider-content-four{display: none;}
+.slider-content-two, .slider-content-three, .slider-content-four{display: none;}
 
 /*For Javascript to activate*/
 .slider-content-inactive{display: none;}
