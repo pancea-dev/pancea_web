@@ -47,7 +47,16 @@ h4{
     margin-bottom: .4rem;
 }
 
-p, ul{
+h5{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 200;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: #A7A7A7;
+    margin-top: 1rem;
+}
+
+p, li, label{
     font-family: depot-new-web, sans-serif;
     font-weight: 200;
     font-size: 1.2rem;
@@ -89,7 +98,7 @@ button:focus{outline: none;}
     h1{font-size: 3rem}
     h2{font-size: 2.7rem}
     h3{font-size: 1.4rem}
-    p, li{font-size: 1rem;}
+    p, li, label{font-size: 1rem;}
     button{font-size: .9rem;}
 }
 
@@ -564,8 +573,17 @@ button:focus{outline: none;}
 
 /*------------------------------Popup Section--------------------------------*/
 
-.popup-wrapper{
-    z-index: 999;
+.darken{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.popup{
+    z-index: 101;
     overflow: auto;
     position: fixed;
     max-width: 52rem;
@@ -581,7 +599,7 @@ button:focus{outline: none;}
     box-shadow: 0 -1em 2em #41414133;
 }
 
-.popup-wrapper .nav, .popup-wrapper .nav-min{
+.popup .nav, .popup .nav-min{
     width: calc(100% + 4rem);
     margin: 2rem -2rem;
     height: 20px;
@@ -589,15 +607,14 @@ button:focus{outline: none;}
     justify-content: space-between;
 }
 
-.popup-wrapper .nav-min{justify-content: flex-end;}
+.popup .nav-min{justify-content: flex-end;}
 
-.popup-wrapper p{
+.popup p{
     margin-top: 1.5rem;
-    margin-bottom: .5rem;
     max-width: 44rem;
 }
 
-.popup-wrapper .nav img, .popup-wrapper .nav-min img{
+.popup .nav img, .popup .nav-min img{
     height: 30px;
     width: 30px;
 }
@@ -613,10 +630,13 @@ input, textarea{
 }
 
 textarea{
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 1rem;
     border-radius: .5rem;
     resize: vertical;
-    margin-right: 2rem;
+    margin-right: 4rem;
+    display: block;
 }
 
 input[type=submit]{
@@ -631,18 +651,20 @@ input[type=submit]{
     cursor: pointer;
 }
 
-input[type=submit]:hover{
-    transform: scale(1.05);
-}
-
 input:focus, textarea:focus{
     outline: none;
 }
 
 /* ----------- */
 
+#individual-form-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .individual-user input{
     width: 200px;
+    margin-top: 2rem;
 }
 
 .individual-user input[type=submit]{
@@ -650,31 +672,23 @@ input:focus, textarea:focus{
     width: 150px;
 }
 
-/* ----------- */
-
-.employer-user{
-    display: flex;
-}
-
-
 #employer-form-wrapper{
-    width: 100%;
     margin-top: 2rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: var(--black) 1px solid;
 }
 
 @media only screen and (max-width: 50em) {
-    .popup-wrapper{
+    .popup{
         padding: 0 2rem 4rem;
     }
 
-    .popup-wrapper .nav, .popup-wrapper .nav-min{
+    .popup .nav, .popup .nav-min{
         width: 100%;
         margin: 2rem 0rem;
     }
 
-    .popup-wrapper .nav img{
+    .popup .nav img{
         height: 25px;
         width: 25px;
     }
