@@ -27,7 +27,7 @@
     <div class="menu-wrapper">
         <div class="menu">
             <img src="./assets/global/wordmark-color.svg" alt="Pancea wordmark">
-            <a href="#"><button class="js-button">View Plans</button></a>
+            <button class="js-button">Get Started</button>
         </div>
     </div>
 
@@ -223,6 +223,7 @@
             </div>
             <img src="./assets/testimonial-section/partner-logos.png">
         </div>
+
     </div>
 
     <div class="popup-wrapper">
@@ -230,29 +231,29 @@
 
         <div class="popup">
             <div class="nav">
-                <img src="./assets/popup/back-arrow.svg" alt="Go back">
-                <img src="./assets/popup/exit.svg" alt="Dismiss">
+                <img class="back" src="./assets/popup/back-arrow.svg" alt="Go back">
+                <img class="dismiss" src="./assets/popup/exit.svg" alt="Dismiss">
             </div>
 
-            <!-- <div class="nav-min">
-                <img src="./assets/popup/exit.svg" alt="Dismiss">
-            </div> -->
+            <div class="nav-min">
+                <img class="dismiss" src="./assets/popup/exit.svg" alt="Dismiss">
+            </div>
 
-            <!-- <div class="user-selection">
+            <div class="user-selection">
                 <h2>Which best describes you?</h2>
-                <p>I'm interested in Pancea for myself ></p>
-                <p>I'm interested in Pancea for my workforce ></p>
-            </div> -->
+                <p class="individual-choice">I'm interested in Pancea for myself ></p>
+                <p class="employer-choice">I'm interested in Pancea for my workforce ></p>
+            </div>
 
-            <!-- <div class="individual-user">
+            <div class="individual-user">
                 <h2>Get the latest Pancea news!</h2>
                 <p>Pancea is not currently available for individuals, but you can enter your email below to receive updates to your mailbox, as well as learn when Pancea is ready for you. Thank you so much for your interest and patience!</p>
                 <form id="individual-form-wrapper">
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="submit" value="Get Updates">
+                    <input class="individual-submit" type="submit" value="Get Updates">
                 </form>
                 <h5>Pancea respects your privacy. Your email will never be sold or shared with 3rd parties.</h5>
-            </div> -->
+            </div>
 
             <div class="employer-user">
                 <h2>Get the latest Pancea news!</h2>
@@ -277,15 +278,20 @@
                     <p>Comments or questions?</p>
                     <textarea rows="4" name="comment"></textarea>
 
-                    <input type="submit" value="Get Updates">
+                    <input class="employer-submit" type="submit" value="Get Updates">
                 </form>
                 <h5>Pancea respects your privacy. Your information will never be sold or shared with 3rd parties.</h5>
             </div>
 
-            <!-- <div class="confirmation-employer">
+            <div class="employer-confirmation">
                 <h2>All done!</h2>
                 <p>Thank you for your interest, our team will be reaching out to you within 24 hours!</p>
-            </div> -->
+            </div>
+
+            <div class="individual-confirmation">
+                <h2>All done!</h2>
+                <p>Thank you for your interest!</p>
+            </div>
 
         </div>
     </div>
@@ -301,6 +307,7 @@
         </div>
     </div> -->
 
+<script src="scripts/popup.js"></script>
 <script src="scripts/sticky-menu.js"></script>
 <script src="scripts/smooth-scroll.js"></script>
 <script src="scripts/slider.js"></script>
