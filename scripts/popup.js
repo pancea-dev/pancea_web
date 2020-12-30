@@ -1,10 +1,10 @@
 const popup = () => {
-    const getStarted = document.querySelector('.js-button')
-    const popup = document.querySelector('.popup')
-    const darken = document.querySelector('.darken')
+    const getStarted = document.querySelectorAll('.js-button');
+    const popup = document.querySelector('.popup');
+    const darken = document.querySelector('.darken');
     const dismiss = document.querySelector('.nav .dismiss');
     const dismissMin = document.querySelector('.nav-min .dismiss');
-    const back = document.querySelector('.back')
+    const back = document.querySelector('.back');
 
     const nav = document.querySelector('.nav');
     const navMin = document.querySelector('.nav-min');
@@ -19,11 +19,13 @@ const popup = () => {
     const individualSubmit = document.querySelector('.individual-submit');
     const employerConfirmation = document.querySelector('.employer-confirmation');
     const individualConfirmation = document.querySelector('.individual-confirmation');
-    
-    getStarted.addEventListener('click', () => {
-        popup.style.transform = 'translateY(0)';
-        darken.style.display = 'block';
-    });
+
+    getStarted.forEach(function(el){
+        el.addEventListener('click', function () {
+            popup.style.transform = 'translateY(0)';
+            darken.style.display = 'block';
+        });
+      });
 
     darken.addEventListener('click', () => {
         popup.style.transform = 'translateY(120vh)';
