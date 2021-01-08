@@ -9,6 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --black: #5D5D5D;
     --white: #f8f8f8;
     --blue: #11b3bc;
+    --light-blue: #EAF3F3;
 }
 
 body{background-color: var(--white);}
@@ -64,7 +65,10 @@ p, li, label{
     color: var(--black);
 }
 
-a{text-decoration: none;}
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 button{
     cursor: pointer;
@@ -151,7 +155,7 @@ button:focus{outline: none;}
     transition: ease .3s;
 }
 
-@media only screen and (max-width: 50em){
+@media only screen and (max-width: 50rem){
     .menu-wrapper{height: 70px;}
     .menu{padding: 0 1.5em;}
     .menu img{width: 100px;}
@@ -228,13 +232,13 @@ button:focus{outline: none;}
     top: -250px;
 }
 
-@media only screen and (max-width: 70em){
+@media only screen and (max-width: 70rem){
     .hero-wrapper{background-position: calc(100% + 350px) 100%;}
 
     .hero p{font-size: 1.3rem}
 }
 
-@media only screen and (max-width: 50em){
+@media only screen and (max-width: 50rem){
     .hero-wrapper{background-image: initial;}
 
     .hero{padding: 0 2em;}
@@ -261,7 +265,7 @@ button:focus{outline: none;}
 /*------------------------------Features Section--------------------------------*/
 
 .features-wrapper{
-    background-color:#EAF3F3;
+    background-color: var(--light-blue);
     position: relative;
 }
 
@@ -325,7 +329,7 @@ button:focus{outline: none;}
     margin: -6rem 0 -16rem 35%;
 }
 
-@media only screen and (max-width: 50em){
+@media only screen and (max-width: 50rem){
     .features{
         display: block;
         padding-bottom: 8rem;
@@ -355,9 +359,9 @@ button:focus{outline: none;}
 }
 
 .employer-wrapper .cards-wrapper{
-    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(../assets/employer-section/pexels-andrea-piacquadio.jpg);
+    background: linear-gradient(0deg, var(--white) 0%, var(--white) 15%, rgba(255,255,255,0) 100%), url(../assets/employer-section/pexels-christina-morillo-1181562.jpg);
     background-size: cover;
-    background-position: 50% 30%;
+    background-position: 70% 100%;
 }
 
 .employer-wrapper .cards{
@@ -400,13 +404,13 @@ button:focus{outline: none;}
 
 #card-5 .bubble{background-color: #D3EEEF;}
 
-@media only screen and (max-width: 50em){
+@media only screen and (max-width: 50rem){
     .employer-wrapper .copy-wrapper{
         margin: 0rem auto 4rem;
-        padding: 15rem 2rem 0;
-        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, #ffffff00 100%), url(../assets/employer-section/pexels-andrea-piacquadio.jpg);
+        padding: 25rem 2rem 0;
+        background: linear-gradient(0deg, var(--white) 0%, var(--white) 35%, #ffffff00 100%), url(../assets/employer-section/pexels-christina-morillo-1181562.jpg);
         background-size: cover;
-        background-position: 60% 50%;
+        background-position: 55% 10%;
     }
 
     .employer-wrapper .copy{
@@ -462,21 +466,12 @@ button:focus{outline: none;}
     border-left: #bebebe 1px solid;
 }
 
-/* @media only screen and (max-width: 0em) {
-    .partners-wrapper .copy{flex-basis: 40%;}
-
-    .partners-wrapper img{
-        padding: 1rem 0 1rem 2rem;
-        margin-left: 1rem;
-    }
-} */
-
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 70em) {
     .partners-wrapper{
         flex-direction: column;
         max-width: 40rem;
         padding: 0;
-        margin: 10rem 2rem;
+        margin: 10rem 4rem;
     }
 
     .partners-wrapper img{
@@ -487,6 +482,12 @@ button:focus{outline: none;}
         flex-basis: 50%;
         border-left: initial;
         border-top: #bebebe 1px solid;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .partners-wrapper{
+        margin: 10rem 2rem;
     }
 }
 
@@ -589,7 +590,7 @@ button:focus{outline: none;}
     max-width: 90em;
     max-height: 100em;
     min-height: 50em;
-    column-gap: 5%;
+    column-gap: 6%;
 }
 
 .cta-image{
@@ -597,7 +598,7 @@ button:focus{outline: none;}
     grid-column: 1/3;
     transform-origin: right;
     transform: scale(1.1);
-    transform-origin: right;
+    transform-origin: bottom;
     align-self: center;
 }
 
@@ -609,7 +610,7 @@ button:focus{outline: none;}
     z-index: 1;
 }
 
-@media only screen and (max-width: 70em){
+@media only screen and (max-width: 70rem){
 
     .cta-image{
         transform: scale(1.1) translateX(-2em);
@@ -620,7 +621,7 @@ button:focus{outline: none;}
     }
 }
 
-@media only screen and (max-width: 50em){
+@media only screen and (max-width: 50rem){
     .cta{
         grid-template-rows: 31em auto;
         margin: 0 auto 10vh;
@@ -644,8 +645,93 @@ button:focus{outline: none;}
         grid-row: 2;
         margin: 0;
         align-self: end;
-        /* background: linear-gradient(0deg, #1E6B89 0%, rgb(30, 107, 137) 80%, rgba(30, 107, 137,.9) 90%, rgba(30, 107, 137, .6) 95%, rgba(30, 107, 137, .3) 98%, rgba(30, 107, 137,0) 100%); */
     }
+}
+
+/*------------------------------Team Section--------------------------------*/
+
+.team-wrapper{
+    margin: 10% auto 2rem;
+    max-width: 70rem;
+    padding: 4rem;
+}
+
+.team-wrapper h2{
+    max-width: 30rem;
+    margin-bottom: 5rem;
+}
+
+.team-member-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member{
+    max-width: 30rem;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    margin-bottom: 4rem;
+    flex: 40%
+}
+
+.team-member img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.team-member .copy{
+    margin-left: 2rem;
+}
+
+.team-member h3, .advisor h3{
+    margin-bottom: .2rem;
+}
+
+.advisor-title{
+    max-width: 25rem;
+    border-bottom: #bebebe 1px solid;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.advisor{
+    max-width: 20rem;
+    margin-top: 2rem
+}
+
+
+@media only screen and (max-width: 60rem){
+    .team-member-wrapper{
+        display: initial;
+    }
+
+}
+
+@media only screen and (max-width: 50rem){
+
+    .team-wrapper{
+        padding: 2rem;
+    }
+
+    .team-member{
+        margin-bottom: 3rem;
+        margin-right: 0;
+    }
+
+    .team-member img{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+/*------------------------------Footer--------------------------------*/
+
+footer{
+    background-color: var(--light-blue);
+    padding: 4rem;
+    text-align: center;
 }
 
 /*------------------------------Popup Section--------------------------------*/
@@ -786,22 +872,3 @@ input:focus, textarea:focus{
 
 /* For JS to activate */
 .popup .nav, .employer-confirmation, .individual-confirmation, .employer-user, .individual-user{display: none;}
-
-/*------------------------------Team Section--------------------------------*/
-
-/* .team-wrapper{
-    background-color: #EAF3F3;
-    padding: 6rem 0;
-}
-
-.team{
-    max-width: 70rem;
-    padding: 0 4rem;
-    margin: 0 auto;
-} */
-
-/*------------------------------Footer--------------------------------*/
-
-    footer{
-
-    }
