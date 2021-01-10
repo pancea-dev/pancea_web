@@ -470,7 +470,7 @@ button:focus{outline: none;}
 
 .partners-wrapper img{
     height: 260px;
-    width: 527px;
+    width: auto;
     padding: 1rem 0 1rem 4rem;
     flex-basis: 50%;
     border-left: #bebebe 1px solid;
@@ -485,7 +485,9 @@ button:focus{outline: none;}
     }
 
     .partners-wrapper img{
-        max-width: 400px;
+        width: 100%;
+        height: auto;
+        max-width: 450px;
         padding: 2.2rem 0;
         margin-top: 1rem;
         flex-basis: 50%;
