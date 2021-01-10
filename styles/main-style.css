@@ -346,7 +346,10 @@ button:focus{outline: none;}
 
     .features .cards{
         padding: 3rem 2rem 0;
-        gap: 11rem
+    }
+
+    .card-popout{
+        margin-top: 11rem;
     }
 }
 
