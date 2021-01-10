@@ -292,14 +292,13 @@ button:focus{outline: none;}
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
-    gap: 15rem;
     padding: 15rem 4rem 15rem 3rem;
 }
 
 .card-popout{
     position: relative;
     max-width: 25rem;
-    margin: 0 auto;
+    margin: 15rem auto 0;
     background-color: #FFF;
     border-radius: 10px;
     box-shadow: 0 2em 2em #0e585133;
@@ -312,6 +311,10 @@ button:focus{outline: none;}
     background: linear-gradient(0deg, #FFF 0%, #FFF 65%, rgba(255,255,255,0) 100%);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+#card-1{
+    margin-top: 0;
 }
 
 #card-1 img{
@@ -370,7 +373,6 @@ button:focus{outline: none;}
     padding: 8rem 4rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
 }
 
 .employer-wrapper #card-4{
@@ -380,6 +382,7 @@ button:focus{outline: none;}
 .card-bubble{
     position: relative;
     max-width: 25rem;
+    margin-top: 5rem;
     background-color: #FFF;
     border-radius: 10px;
     box-shadow: 0 2em 2em #41414133;
@@ -457,10 +460,14 @@ button:focus{outline: none;}
     padding: 0 4rem;
 }
 
-.partners-wrapper .copy{flex-basis: 50%;}
+.partners-wrapper .copy{
+    flex-basis: 50%;
+    margin-right: 2rem;
+}
 
 .partners-wrapper img{
-    width: 30%;
+    height: 260px;
+    width: 527px;
     padding: 1rem 0 1rem 4rem;
     flex-basis: 50%;
     border-left: #bebebe 1px solid;
@@ -475,7 +482,6 @@ button:focus{outline: none;}
     }
 
     .partners-wrapper img{
-        width: 80%;
         max-width: 400px;
         padding: 2.2rem 0;
         margin-top: 1rem;
