@@ -661,7 +661,7 @@ button:focus{outline: none;}
     margin-bottom: 5rem;
 }
 
-.team-member-wrapper{
+.two-column-wrapper{
     display: flex;
     flex-wrap: wrap;
 }
@@ -675,7 +675,7 @@ button:focus{outline: none;}
     flex: 40%
 }
 
-.team-member img{
+.team-member img, .advisor img{
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -690,20 +690,16 @@ button:focus{outline: none;}
 }
 
 .advisor-title{
-    max-width: 25rem;
+    max-width: 30rem;
     border-bottom: #bebebe 1px solid;
     padding-bottom: 1rem;
     margin-top: 2rem;
-}
-
-.advisor{
-    max-width: 20rem;
-    margin-top: 2rem
+    margin-bottom: 2rem;
 }
 
 
 @media only screen and (max-width: 60rem){
-    .team-member-wrapper{
+    .two-column-wrapper{
         display: initial;
     }
 
@@ -732,6 +728,19 @@ footer{
     background-color: var(--light-blue);
     padding: 4rem;
     text-align: center;
+}
+
+footer .social{
+    margin: 0 auto;
+    max-width: 25em;
+    width: 70%;
+    position: static;
+    padding: 2.5em 0 0;
+}
+
+footer img{
+    width: 1.1rem;
+    padding: 0 .9rem;
 }
 
 /*------------------------------Popup Section--------------------------------*/
