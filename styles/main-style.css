@@ -757,7 +757,7 @@ footer img{
 /*------------------------------Popup Section--------------------------------*/
 
 .darken{
-    display: none;
+    display: block;
     transition: 0.4s ease-in-out;
     z-index: 100;
     position: fixed;
@@ -768,7 +768,7 @@ footer img{
 }
 
 .popup{
-    transform: translateY(120vh);
+    transform: translateY(-50%);
     transition: 0.6s ease-in-out;
     z-index: 101;
     overflow: auto;
@@ -777,12 +777,14 @@ footer img{
     max-height: 90vh;
     padding: 0 4rem 4rem;
     margin: 0 auto;
-    left: 0;
+    top:50%;
+    left:0;
     right: 0;
-    bottom: 0;
+    
     background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /*border-top-left-radius: 10px;
+    border-top-right-radius: 10px;*/
+    border-radius:  10px;
     box-shadow: 0 -1em 2em #41414133;
 }
 
@@ -822,7 +824,7 @@ input, textarea{
 
 textarea{
     width: 90%;
-    max-width: 300px;
+    max-width: 400px;
     margin-bottom: 1rem;
     border-radius: .5rem;
     resize: vertical;
@@ -842,6 +844,7 @@ input[type=submit]{
     cursor: pointer;
 }
 
+
 input:focus, textarea:focus{
     outline: none;
 }
@@ -850,17 +853,17 @@ input:focus, textarea:focus{
 
 #individual-form-wrapper{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .individual-user input{
-    width: 200px;
+    width: 250px;
     margin-top: 2rem;
 }
 
 .individual-user input[type=submit]{
-    margin-left: -40px;
-    width: 150px;
+    margin-left: 5px;
+    width: 100px;
 }
 
 #employer-form-wrapper{
@@ -891,4 +894,4 @@ input:focus, textarea:focus{
 }
 
 /* For JS to activate */
-.popup .nav, .employer-confirmation, .individual-confirmation, .employer-user, .individual-user{display: none;}
+.popup .nav-min, .employer-confirmation, .individual-confirmation, .employer-user, .user-selection{display: none;}

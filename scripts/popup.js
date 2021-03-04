@@ -1,5 +1,5 @@
 const popup = () => {
-    const getStarted = document.querySelectorAll('.js-button');
+    const learnMore = document.querySelectorAll('.js-button');
     const popup = document.querySelector('.popup');
     const darken = document.querySelector('.darken');
     const dismiss = document.querySelector('.nav .dismiss');
@@ -25,10 +25,19 @@ const popup = () => {
     const employerConfirmation = document.querySelector('.employer-confirmation');
     const individualConfirmation = document.querySelector('.individual-confirmation');
 
-    getStarted.forEach(function(el){
+    learnMore.forEach(function(el){
         el.addEventListener('click', function () {
-            popup.style.transform = 'translateY(0)';
+            popup.style.transform = 'translateY(-50%)';
             darken.style.display = 'block';
+            userSelection.style.display = 'block';
+            individualUser.style.display = 'none';
+            individualConfirmation.style.display = 'none';
+            employerUser.style.display = 'none';
+            employerConfirmation.style.display = 'none';
+            navMin.style.display = 'flex';
+            nav.style.display = 'none';
+
+            
         });
       });
 
@@ -71,6 +80,7 @@ const popup = () => {
 
      employerSubmit.addEventListener('click', e => {
         e.preventDefault();
+        employerSubmit.disabled = true;
         $.ajax({
             url: employerScriptURL,
             data: $(employerForm).serialize(),
@@ -82,18 +92,21 @@ const popup = () => {
                     nav.style.display = 'none';
                     navMin.style.display = 'flex';
                     employerUser.style.display = 'none';
-                    employerConfirmation.style.display = 'block'
+                    employerConfirmation.style.display = 'block';
+                    employerSubmit.disabled = true;
                 },
                 200: function(data) {//200 is a success code. it went through!
                 //success
                     nav.style.display = 'none';
                     navMin.style.display = 'flex';
                     employerUser.style.display = 'none';
-                    employerConfirmation.style.display = 'block'
+                    employerConfirmation.style.display = 'block';
+                    employerSubmit.disabled = true;
                 },
                 403: function(data) {//403 is when something went wrong and the submission didn't go through
                 //error
                     alert('Unable to submit, please reload page and try again');
+                    employerSubmit.disabled = true;
                 }
             }
         })
@@ -102,6 +115,7 @@ const popup = () => {
 
    individualSubmit.addEventListener('click', e => {
         e.preventDefault();
+        individualSubmit.disabled = true;
         $.ajax({
             url: individualScriptURL,
             data: $(individualForm).serialize(),
@@ -113,18 +127,21 @@ const popup = () => {
                         nav.style.display = 'none';
                         navMin.style.display = 'flex';
                         individualUser.style.display = 'none';
-                        individualConfirmation.style.display = 'block'
+                        individualConfirmation.style.display = 'block';
+                        individualSubmit.disabled = false;
                 },
                 200: function(data) {//200 is a success code. it went through!
                 //success
                         nav.style.display = 'none';
                         navMin.style.display = 'flex';
                         individualUser.style.display = 'none';
-                        individualConfirmation.style.display = 'block'
+                        individualConfirmation.style.display = 'block';
+                        individualSubmit.disabled = false;
                 },
                 403: function(data) {//403 is when something went wrong and the submission didn't go through
                 //error
                     alert('Unable to submit, please reload page and try again');
+                    individualSubmit.disabled = false;
                 }
             }
         })
