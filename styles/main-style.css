@@ -690,6 +690,7 @@ button:focus{outline: none;}
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .team-member .copy{
@@ -895,3 +896,27 @@ input:focus, textarea:focus{
 
 /* For JS to activate */
 .popup .nav-min, .employer-confirmation, .individual-confirmation, .employer-user, .user-selection{display: none;}
+
+/*------------------------------Privacy Policy Page--------------------------------*/
+.pdf-header {
+    font-size: 20px;
+}
+
+.pdf-wrapper {
+    text-align: center;
+}
+
+.pdf-title{
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    color: #0c8084
+}
+
+.home-link{
+    color: #0c8084;
+    padding: 20px;
+}
+
+/*------------------------------TOS Page--------------------------------*/
