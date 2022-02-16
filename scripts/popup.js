@@ -26,18 +26,16 @@ const popup = () => {
     const individualConfirmation = document.querySelector('.individual-confirmation');
 
     learnMore.forEach(function(el){
-        el.addEventListener('click', function () {
+        el.addEventListener('click', () => {
             popup.style.transform = 'translateY(-50%)';
             darken.style.display = 'block';
-            userSelection.style.display = 'block';
+            userSelection.style.display = 'none';
             individualUser.style.display = 'none';
             individualConfirmation.style.display = 'none';
-            employerUser.style.display = 'none';
+            employerUser.style.display = 'block';
             employerConfirmation.style.display = 'none';
             navMin.style.display = 'flex';
-            nav.style.display = 'none';
-
-            
+            nav.style.display = 'none';     
         });
       });
 
@@ -78,40 +76,41 @@ const popup = () => {
         individualUser.style.display = 'block';
     });
 
-     employerSubmit.addEventListener('click', e => {
-        e.preventDefault();
-        employerSubmit.disabled = true;
-        $.ajax({
-            url: employerScriptURL,
-            data: $(employerForm).serialize(),
-            type: 'POST',
-            dataType: "json",
-            statusCode: { //the status code from the POST request
-                0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
-                //success
-                    nav.style.display = 'none';
-                    navMin.style.display = 'flex';
-                    employerUser.style.display = 'none';
-                    employerConfirmation.style.display = 'block';
-                    employerSubmit.disabled = true;
-                },
-                200: function(data) {//200 is a success code. it went through!
-                //success
-                    nav.style.display = 'none';
-                    navMin.style.display = 'flex';
-                    employerUser.style.display = 'none';
-                    employerConfirmation.style.display = 'block';
-                    employerSubmit.disabled = true;
-                },
-                403: function(data) {//403 is when something went wrong and the submission didn't go through
-                //error
-                    alert('Unable to submit, please reload page and try again');
-                    employerSubmit.disabled = true;
-                }
-            }
-        })
-
-    });
+    //  employerSubmit.addEventListener('click', e => {
+    //     e.preventDefault();
+    //     employerSubmit.disabled = true;
+    //     $.ajax({
+    //         url: employerScriptURL,
+    //         data: $(employerForm).serialize(),
+    //         type: 'POST',
+    //         dataType: "json",
+    //         statusCode: { //the status code from the POST request
+    //             0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
+    //             //success
+    //                 console.log('Google CORS Error', data);
+    //                 nav.style.display = 'none';
+    //                 navMin.style.display = 'flex';
+    //                 employerUser.style.display = 'none';
+    //                 employerConfirmation.style.display = 'block';
+    //                 employerSubmit.disabled = true;
+    //             },
+    //             200: function(data) {//200 is a success code. it went through!
+    //             //success
+    //                 nav.style.display = 'none';
+    //                 navMin.style.display = 'flex';
+    //                 employerUser.style.display = 'none';
+    //                 employerConfirmation.style.display = 'block';
+    //                 employerSubmit.disabled = true;
+    //             },
+    //             403: function(data) {//403 is when something went wrong and the submission didn't go through
+    //             //error
+    //                 alert('Unable to submit, please reload page and try again');
+    //                 console.log('Google 403 error', data);
+    //                 employerSubmit.disabled = true;
+    //             }
+    //         }
+    //     })
+    // });
 
    individualSubmit.addEventListener('click', e => {
         e.preventDefault();
@@ -124,11 +123,8 @@ const popup = () => {
             statusCode: { //the status code from the POST request
                 0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
                 //success
-                        nav.style.display = 'none';
-                        navMin.style.display = 'flex';
-                        individualUser.style.display = 'none';
-                        individualConfirmation.style.display = 'block';
-                        individualSubmit.disabled = false;
+                    alert('json output:', $(employerForm).serialize());
+                    employerSubmit.disabled = true;
                 },
                 200: function(data) {//200 is a success code. it went through!
                 //success
@@ -137,6 +133,7 @@ const popup = () => {
                         individualUser.style.display = 'none';
                         individualConfirmation.style.display = 'block';
                         individualSubmit.disabled = false;
+                        alert('json output:', $(individualForm).serialize());
                 },
                 403: function(data) {//403 is when something went wrong and the submission didn't go through
                 //error

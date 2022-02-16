@@ -194,9 +194,16 @@ button:focus{outline: none;}
 }
 
 .hero .copy{
+   flex-direction: column;
+}
+
+.hero .content{
     animation: fade-in .8s ease-out 1;
     display: flex;
     position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .hero .copy img{
@@ -758,7 +765,6 @@ footer img{
 /*------------------------------Popup Section--------------------------------*/
 
 .darken{
-    display: block;
     transition: 0.4s ease-in-out;
     z-index: 100;
     position: fixed;
@@ -769,7 +775,7 @@ footer img{
 }
 
 .popup{
-    transform: translateY(-50%);
+    transform: translateY(120vh);
     transition: 0.6s ease-in-out;
     z-index: 101;
     overflow: auto;
@@ -894,8 +900,6 @@ input:focus, textarea:focus{
     cursor: pointer;
 }
 
-/* For JS to activate */
-.popup .nav-min, .employer-confirmation, .individual-confirmation, .employer-user, .user-selection{display: none;}
 
 /*------------------------------Privacy Policy Page--------------------------------*/
 .pdf-header {
@@ -920,3 +924,6 @@ input:focus, textarea:focus{
 }
 
 /*------------------------------TOS Page--------------------------------*/
+
+/* For JS to activate */
+ .darken, .nav-min, .employer-confirmation, .individual-confirmation, .individual-user, .employer-user, .user-selection{display: none;}

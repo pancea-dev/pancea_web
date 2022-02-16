@@ -35,13 +35,13 @@
         <div class="hero">
             <div class="blue-circle"></div>
             <div class="green-circle"></div>
-            <div class="copy">
-                <div>
+            <div class="content">
+                <div class="copy">
                     <img src="./assets/global/logo-wordmark-combo.svg" alt="Pancea logo">
                     <h1>Wave goodbye to chronic pain.</h1>
                     <p>Pancea's philosophy is that you are the expert of your own body. All you need is a little guidance and a path forward to live pain free and become the best version of&nbsp;you.</p>
                     <br></br>
-                    <button class="button" onclick="window.open('https://wideo.co/embed/27966581616704117511?width=560&height=315&repeat=false&autoplay=false&html5=true','_blank')">Watch Demo</button>
+                    <button class="button" onclick="window.open('https://m.youtube.com/watch?v=bluKMBDi8ZI','_blank')">Watch Demo</button>
                 </div>
             </div>
         </div>
@@ -390,9 +390,15 @@
             <div class="employer-user">
                 <h2>Learn more about Pancea for your workforce!</h2>
                 <p> Please fill out your information below and our team will be in touch shortly.</p>
-                <form id="employer-form-wrapper">
-
-                    <input type="name" name="name" placeholder="Name/Company" required>
+                <form 
+                    id="employer-form-wrapper"
+                    action="https://formspree.io/f/moqrddqy"
+                    method="POST"
+                >
+                    <input type="name" name="name" placeholder="Name" required>
+                    <br>
+                    <input type="company" name="company" placeholder="Company" required>
+                    <br>
                     <input type="email" name="email" placeholder="Email" required>
 
                     <p>Inquiring about corporate rates?</p>
@@ -409,7 +415,6 @@
 
                     <p>Comments or questions?</p>
                     <textarea rows="4" name="comment"></textarea>
-
                     <input class="employer-submit" type="submit" value="Submit">
                 </form>
                 <h5>Pancea respects your privacy. Your information will never be sold or shared with 3rd parties.</h5>
@@ -429,6 +434,7 @@
     </div>
 
 <script src="scripts/popup.js"></script>
+<script srx="https://smtpjs/com/v3/smtp.js"></script>
 <script src="scripts/sticky-menu.js"></script>
 <script src="scripts/slider.js"></script>
 
