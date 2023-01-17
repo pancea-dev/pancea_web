@@ -335,8 +335,8 @@ button:focus{outline: none;}
 }
 
 #card-3 img{
-    width: 50%;
-    margin: -6rem 0 -16rem 35%;
+    width: 80%;
+    margin: -8rem 0 -20rem 25%;
 }
 
 @media only screen and (max-width: 50rem){
@@ -475,12 +475,27 @@ button:focus{outline: none;}
     margin-right: 2rem;
 }
 
-.partners-wrapper img{
-    height: 260px;
+.partners-wrapper .logos{
+    /* height: 260px; */
     width: auto;
-    padding: 1rem 0 1rem 4rem;
-    flex-basis: 50%;
+    padding: 0 0 0 4rem;
+    flex-basis: 60%;
     border-left: #bebebe 1px solid;
+    flex-direction: column ;
+    
+}
+.partners-wrapper .logo{
+    height: 60px;
+    width: auto;
+    /* max-width: 450px; */
+    /* padding: 2.2rem 0; */
+    margin-top: 1rem;
+    /* flex-basis: 50%; */
+    margin-right: 2rem;
+    /* border-left: initial; */
+    /* border-top: #bebebe 1px solid; */
+    /* background-color: #1E6B89; */
+    
 }
 
 @media only screen and (max-width: 70em) {
@@ -491,7 +506,7 @@ button:focus{outline: none;}
         margin: 10rem 4rem;
     }
 
-    .partners-wrapper img{
+    /* .partners-wrapper img{
         width: 100%;
         height: auto;
         max-width: 450px;
@@ -500,7 +515,7 @@ button:focus{outline: none;}
         flex-basis: 50%;
         border-left: initial;
         border-top: #bebebe 1px solid;
-    }
+    } */
 }
 
 @media only screen and (max-width: 50em) {
@@ -697,7 +712,7 @@ button:focus{outline: none;}
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover ;
 }
 
 .team-member .copy{
